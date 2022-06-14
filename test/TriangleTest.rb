@@ -10,7 +10,7 @@ describe Triangle do
 
         context 'Given [[-1], [2, 3], [1, -1, -3]]' do
             it 'should return 11' do
-                expect(subject.minimumTotal([[-1], [2, 3], [1, -1, -3]])).to eql(-2)
+                expect(subject.minimumTotal([[-1], [2, 3], [1, -1, -3]])).to eql(-1)
             end
         end
 

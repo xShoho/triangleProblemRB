@@ -1,11 +1,11 @@
 class Triangle
     def minimumTotal(triangle)
-        res = 0
-
-        for row in triangle
-            res += row.min()
+        (triangle.length - 2).downto(0) do |i|
+            for j in (0..triangle[i].length - 1)
+                triangle[i][j] += [triangle[i + 1][j], triangle[i + 1][j + 1]].min()
+            end
         end
 
-        return res
+        return triangle[0][0]
     end
 end
